@@ -1,0 +1,99 @@
+[
+    {
+        "name": "Polyalphabetic Cipher",
+        "description": "A polyalphabetic cipher is an encryption method that uses multiple substitution alphabets to encrypt the plaintext. The most famous example is the Vigenère cipher, created in the 16th century.",
+        "keyFeatures": [
+            "Uses multiple cipher alphabets (one for each letter of the key)",
+            "The key determines which cipher alphabet to use for each letter",
+            "The key is repeated to match the length of the plaintext",
+            "More resistant to frequency analysis than simple substitution"
+        ],
+        "encryptionProcess": [
+            "Start with a tabula recta (a 26×26 grid of alphabets, each shifted by one)",
+            "Use each letter of the key to select a row in the tabula recta",
+            "For each plaintext letter, find it in the first row and take the letter at the intersection with the key's row"
+        ],
+        "example": {
+            "key": "KEY",
+            "plaintext": "HELLO",
+            "repeatedKey": "KEYKE",
+            "steps": [
+                "H + K = R",
+                "E + E = I",
+                "L + Y = J",
+                "L + K = V",
+                "O + E = S"
+            ],
+            "ciphertext": "RIJVS"
+        },
+        "note": "Polyalphabetic ciphers were considered unbreakable for nearly three centuries until methods were developed to determine the key length and then break the cipher by analyzing each alphabet separately."
+    },
+    {
+        "name": "Playfair Cipher",
+        "description": "The Playfair cipher, invented by Charles Wheatstone in 1854, is a manual symmetric encryption technique that encrypts pairs of letters (digraphs) instead of single letters.",
+        "keyFeatures": [
+            "Uses a 5×5 grid of letters based on a keyword",
+            "Letters I and J are typically combined into one cell",
+            "Encrypts letter pairs (digraphs) rather than single letters",
+            "Significantly more secure than simple substitution ciphers"
+        ],
+        "encryptionRules": [
+            "If both letters are in the same row, take the letter to the right of each (wrapping around to the left side if necessary)",
+            "If both letters are in the same column, take the letter below each (wrapping around to the top if necessary)",
+            "If letters are in different rows and columns, form a rectangle and take the letter in the same row but in the column of the other letter"
+        ],
+        "specialCases": [
+            "If a pair contains the same letter, insert an 'X' between them",
+            "If the message has an odd number of letters, add an 'X' at the end"
+        ],
+        "history": "Used in World War I by British forces and later by Australians and Germans during World War II."
+    },
+    {
+        "name": "Simplified DES (S-DES)",
+        "description": "S-DES is a simplified version of the Data Encryption Standard, designed for educational purposes to demonstrate the concepts of modern block ciphers.",
+        "keyFeatures": [
+            "Uses an 8-bit block size (vs 64-bit in full DES)",
+            "Employs a 10-bit key (vs 56-bit in full DES)",
+            "Follows the Feistel network structure with 2 rounds",
+            "Includes initial and final permutations",
+            "Uses S-boxes for confusion and P-boxes for diffusion"
+        ],
+        "encryptionProcess": [
+            "Generate two 8-bit subkeys from the 10-bit key",
+            "Apply the initial permutation (IP) to the plaintext block",
+            "Split the block into left and right halves (4 bits each)",
+            "Perform two rounds of Feistel function using the subkeys",
+            "Apply the final permutation (FP) to get the ciphertext"
+        ],
+        "note": "Demonstrates the fundamental principles of substitution-permutation networks used in modern encryption."
+    },
+    {
+        "name": "RC4",
+        "description": "RC4 is a classic stream cipher, demonstrating symmetric encryption. For this demo, encrypted output is shown in Base64 due to binary data.",
+        "keyFeatures": [
+            "Stream cipher that encrypts one byte at a time",
+            "Based on key-scheduling algorithm (KSA) and pseudo-random generation algorithm (PRGA)",
+            "Simple and fast in software implementation",
+            "Symmetric encryption (same key for encryption and decryption)",
+            "Does not require padding"
+        ],
+        "encryptionProcess": [
+            "Initialize a 256-byte array (S) with values from 0 to 255",
+            "Apply the key-scheduling algorithm (KSA) to mix the array using the key",
+            "Generate a pseudo-random byte stream using the PRGA",
+            "XOR each byte of the plaintext with a byte from the key stream"
+        ],
+        "example": {
+            "key": "KEY",
+            "plaintext": "HELLO",
+            "steps": [
+                "Convert plaintext to bytes: [72, 69, 76, 76, 79]",
+                "Generate key stream bytes: [XY, XY, XY, XY, XY] (varies with key)",
+                "XOR each byte: [72 ⊕ XY, 69 ⊕ XY, ...]",
+                "Base64 encode the result to make it readable"
+            ],
+            "note": "Due to the pseudo-random nature of RC4, the actual output varies unless the full algorithm is shown."
+        },
+        "note": "RC4 is no longer considered secure for use in modern cryptographic systems, but it remains a useful example for teaching stream cipher concepts."
+    }
+]

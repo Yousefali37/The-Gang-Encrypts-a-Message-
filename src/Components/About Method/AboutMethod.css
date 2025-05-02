@@ -1,0 +1,32 @@
+.about-method {
+    margin-top: 0.5rem;
+    color: rgb(113, 113, 122);
+    font-size: 0.875rem;
+}
+
+.about-method__intro, .about-method__conclusion {
+    color: rgb(113, 113, 122);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.about-method__subheading {
+    color: rgb(113, 113, 122) !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.about-method__item {
+    margin-bottom: 0.5rem;
+}
+
+.about-method__step {
+    margin-bottom: 0.5rem;
+}
+
+.about-method__example {
+    padding: 1rem;
+    background: rgb(244, 244, 245);
+    margin-bottom: 1.5rem;
+}

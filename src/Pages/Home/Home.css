@@ -1,0 +1,50 @@
+.home {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 999999px;
+    background: rgba(94, 26, 230, 0.1);
+}
+
+.home__icon-wrapper .home__icon {
+    color: rgb(94, 26, 230);
+    font-size: 2rem;
+}
+
+.home__intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home__intro .home__heading {
+    font-size: 3rem;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home__intro .home__description {
+    max-width: 42rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: auto;
+    color: rgb(113, 113, 122);
+}
+
+.home__cards-wrapper {
+    width: 100%;
+    margin-top: 3rem;
+}

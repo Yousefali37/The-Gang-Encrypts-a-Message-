@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "title": "Simplified DES",
+        "desc": "Data Encryption Standard simpld for educational purposes",
+        "Color": "rgb(139, 92, 246)",
+        "icon": "VpnKeyOutlinedIcon",
+        "link": "Simplified-Des",
+        "btn": "Explore Simplified DES"
+    },
+    {
+        "id": 1,
+        "title": "Playfair Cipher",
+        "desc": "A manual symmetric encryption technique using a 5×5 grid",
+        "Color": "rgb(59, 130, 246)",
+        "icon": "WindowOutlinedIcon",
+        "link": "Playfair-Cipher",
+        "btn": "Explore Playfair Cipher"
+    },
+    {
+        "id": 2,
+        "title": "RC4",
+        "desc": "A polygraphic substitution cipher based on linear algebra",
+        "Color": "rgb(20, 184, 166)",
+        "icon": "FingerprintOutlinedIcon",
+        "link": "RC4",
+        "btn": "Explore RC4 Cipher"
+    },
+    {
+        "id": 3,
+        "title": "Polyalphabetic",
+        "desc": "A cipher that uses multiple substitution alphabets",
+        "Color": "rgb(245, 158, 11)",
+        "icon": "SortOutlinedIcon",
+        "link": "Polyalphabetic",
+        "btn": "Explore Polyalphabetic Cipher"
+    }
+]
