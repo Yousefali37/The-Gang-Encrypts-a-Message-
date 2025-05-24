@@ -53,7 +53,7 @@ function Home() {
                                     const IconComponent = iconMapping[e.icon];
 
                                     return (
-                                        <div className='col-5' key={e.id}>
+                                        <div className='col-lg-5 col-sm-12' key={e.id}>
                                             <Cards
                                                 title={e.title}
                                                 Icon={IconComponent}

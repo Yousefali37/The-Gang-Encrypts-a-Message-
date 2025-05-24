@@ -75,7 +75,7 @@ function Polyalphabetic() {
                 </div>
 
                 <div className="simplified-des__form-group">
-                    <div className='simplified-des__label-group'>
+                    <div className='simplified-des__label-group gap-4'>
                         <label className="simplified-des__label" htmlFor="key">Encryption Key</label>
                         <small className="simplified-des__helper text-muted">
                             The key will be repeated to match message length

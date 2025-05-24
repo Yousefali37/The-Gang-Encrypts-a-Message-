@@ -130,7 +130,7 @@ function SimplifiedDes() {
                 </div>
 
                 <div className="simplified-des__form-group">
-                    <div className='simplified-des__label-group'>
+                    <div className='simplified-des__label-group gap-4'>
                         <label className="simplified-des__label" htmlFor="key">Encryption Key</label>
                         <small className="simplified-des__helper text-muted">
                             For best results, use a random string
@@ -146,7 +146,7 @@ function SimplifiedDes() {
                     />
                 </div>
 
-                <div className="simplified-des__button-group">
+                <div className="simplified-des__button-group flex-wrap">
                     <button className="simplified-des__button simplified-des__button--encrypt" onClick={handleEncrypt}>Encrypt</button>
                     <button className="simplified-des__button simplified-des__button--decrypt" onClick={handleDecrypt}>Decrypt</button>
                 </div>

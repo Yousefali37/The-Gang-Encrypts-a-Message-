@@ -30,7 +30,7 @@
 }
 
 .home__intro .home__heading {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 48px;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -47,4 +47,14 @@
 .home__cards-wrapper {
     width: 100%;
     margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .home__intro .home__heading {
+        font-size: 1.875rem;
+    }
+
+    .home__intro .home__description {
+        font-size: 0.925rem;
+    }
 }

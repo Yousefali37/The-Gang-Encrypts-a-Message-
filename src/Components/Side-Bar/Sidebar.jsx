@@ -20,6 +20,21 @@ function Sidebar() {
     ], []);
 
     useEffect(() => {
+    const handleResize = () => {
+        if (window.innerWidth <= 768) {
+            setIsCollapsed(true);
+        } else {
+            setIsCollapsed(false);
+        }
+    };
+
+    handleResize(); // call on initial load
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
+
+    useEffect(() => {
         const currentLocation = locations.find(loc => location.pathname.includes(loc));
         setActive(currentLocation || "home");
     }, [location.pathname, locations]);
@@ -27,7 +42,6 @@ function Sidebar() {
     const iconMapping = {
         "Simplified-Des": <VpnKeyOutlinedIcon style={{ color: "rgb(139, 92, 246)" }} />,
         "Playfair-Cipher": <WindowOutlinedIcon style={{ color: "rgb(59, 130, 246)" }} />,
-        // "Hill-Cipher": <FingerprintOutlinedIcon style={{ color: "rgb(20, 184, 166)" }} />,
         "Polyalphabetic": <SortOutlinedIcon style={{ color: "rgb(245, 158, 11)" }} />,
         "RC4" : <KeyOffOutlinedIcon style={{ color: "rgb(246, 92, 92)" }} />
     };
